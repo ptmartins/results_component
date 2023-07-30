@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Results summary component</title>
+  <link rel="stylesheet" href="css/main.css">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <div class="mainWrapper">
+    <div class="card">
+      <div class="card__result">
+        <h4 class="result__heading">  Your Result </h4>
+        <div class="result__main">
+          <div class="result__mainScore">
+            <p>76</p>
+            <span>of 100</span>
+          </div>
+        </div>
+        <div class="result__footer">
+          <h3>Great</h3>
+          <p>  You scored higher than 65% of the people who have taken these tests. </p>
+        </div>
+      </div>
+      <div class="card__summary">
+        <h2 class="summary__title">Summary</h2>
+        <ul class="summary__list">
+          <!-- Summary list items rendered dynamically here -->
+        </ul>
+        <button class="btn btn--summary">Continue</button>
+      </div>
+    </div>
+    
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://ptmartins.github.io">Pedro Martins</a>.
+    </div>
+  </div>
+
+  <script src="js/main.js" type="module"></script>
+</body>
+</html>

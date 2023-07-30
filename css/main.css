@@ -1,0 +1,213 @@
+@font-face {
+    font-family: 'Hanken Grotesk';
+    src: url('../assets/fonts/HankenGrotesk-VariableFont_wght.ttf') format("truetype-variations");
+    font-weight: 1999;
+}
+
+
+:root {
+    --text-color: #303b59;
+    --btn-bg-color: var(--text-color);
+    --btn-font-color: #fff;
+    --card-result-bg-color: linear-gradient(to bottom, #7857ff, #2e2be9);
+    --result-main-bg-color: linear-gradient(to bottom, #4e21ca, #2421ca00);
+    --light-red: hsl(0, 100%, 67%);
+    --orangey-yellow: hsl(39, 100%, 56%);
+    --green-teal: hsl(166, 100%, 37%);
+    --cobalt-blue: hsl(234, 85%, 45%);
+    --light-red-opacity: hsla(0, 100%, 67%, 5%);
+    --orangey-yellow-opacity: hsla(39, 100%, 56%, 5%);
+    --green-teal-opacity: hsla(166, 100%, 37%, 5%);
+    --cobalt-blue-opacity: hsla(234, 85%, 45%, 5%);
+    --light-slate-blue: hsl(252, 100%, 67%);
+    --light-royal-blue: hsl(241, 81%, 54%);
+    --violet-blue: hsla(256, 72%, 46%, 1);
+    --persian-blue: hsla(241, 72%, 46%, 0);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    color: var(--text-color);
+    flex-direction: column;
+    font-family: 'Hanken Grotesk', Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    min-height: 100vh;
+    position: relative;
+}
+
+.btn {
+    background-color: var(--btn-bg-color);
+    border: 0;
+    border-radius: 60px;
+    color: var(--btn-font-color);
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    transition: all .2s ease-in;
+}
+
+.btn--summary {
+    width: 100%;
+}
+
+.btn:hover,
+.btn:active {
+    background-color: var(--light-royal-blue);
+}
+
+.mainWrapper {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);;
+}
+
+.card {
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, .3);
+    display: flex;
+    height: 420px;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.card__result {
+    background: var(--card-result-bg-color);
+    border-radius: 20px;
+    color: #fff;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content 1fr min-content;
+    padding: 2rem;
+    text-align: center;
+    width: 46%;
+}
+
+.result__heading {
+    font-size: 1.3rem;
+    opacity: .6;
+}
+
+.card__summary {
+    flex-grow: 1;
+    padding: 1.5rem 2rem;
+}
+
+.result__main {
+    align-self: center;
+    background: var(--result-main-bg-color);
+    border-radius: 50%;
+    grid-area: 2 / 1 / 3 / -1;
+    height: 160px;
+    justify-self: center;
+    padding: 1.5rem;
+    position: relative;
+    width: 160px;
+}
+
+.result__mainScore {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.result__mainScore p {
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 1;
+    margin: 0 0 .375rem;
+}
+
+.result__mainScore span {
+    opacity: .4;
+}
+
+.result__footer h3 {
+    font-size: 1.2rem;
+    margin-bottom: .75rem;
+}
+
+.result__footer p {
+    font-size: 14px;
+    opacity: .6;
+}
+
+.card__summary {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content 1fr min-content;
+}
+
+ul,
+.summary__list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.summary__list {
+    display: grid;
+    gap: .75rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto-fit, 1fr);
+}
+
+.list__item {
+    align-items: center;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    padding: .375rem .75rem;
+}
+
+.list__item--reaction {
+    background-color: var(--light-red-opacity);
+    color: var(--light-red);
+} 
+
+.list__item--memory {
+    background-color: var(--orangey-yellow-opacity);
+    color: var(--orangey-yellow);
+} 
+
+.list__item--verbal {
+    background-color: var(--green-teal-opacity);
+    color: var(--green-teal);
+} 
+
+.list__item--visual {
+    background-color: var(--cobalt-blue-opacity);
+    color: var(--cobalt-blue);
+}
+
+.item__name {
+    flex-grow: 1;
+    padding: 0 1.5rem;
+}
+
+.attribution {
+    margin-top: 3rem;
+}
+
+.item__score {
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+.item__percent {
+    opacity: .5;
+}
+
+@media all and (min-width: 1440px) {
+
+}
